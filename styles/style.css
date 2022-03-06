@@ -56,7 +56,56 @@ body {
 
 .container {
     width: 56.25%;
-    background-color: red;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #C62A70;
+}
+
+header {
+	display: flex;
+	background-color: #fff;
+}
+
+nav {
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-grow: 1;
+}
+
+nav ul{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+nav ul li {
+	border: 1px #C62A70 solid;
+	border-radius: 19px;
+	display: flex;
+	justify-content: center;
+	
+}
+
+nav ul li:hover, .onpage {
+	background-color: #C62A70;
+	
+}
+
+.button {
+	width: 119px;
+	height: 64px;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	color:#C62A70
+}
+
+.button:hover, .onpage1 {
+	color:white;
+}
+
+
+.logoimage {
+	width: 403px;
 }
