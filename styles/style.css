@@ -50,6 +50,9 @@ table {
 /* The background is a pattern. */
 body {
     background-image: url("../img/background.png");
+	background-repeat:repeat;
+	background-position:left center;
+	background-size:1930px;
 }
 
 /* The entire website is wrapped in a narrow container. The mockup is 1920 and the container is 1080. 1080/1920=.5625=56.25% */
@@ -79,6 +82,7 @@ nav ul{
 
 nav ul li {
 	border: 1px #C62A70 solid;
+	box-shadow: 0 3px 6px #00000016;
 	border-radius: 19px;
 	display: flex;
 	justify-content: center;
