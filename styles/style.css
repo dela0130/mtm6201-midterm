@@ -63,6 +63,24 @@ h1 {
 	text-shadow: 0 1px #30481D, 1px 0 #30481D, 0 -1px #30481D, -1px 0 #30481D;
 }
 
+h2 {
+	font-family: 'Lemon', cursive;
+	font-size: 60px;
+	color:#A3E66C;
+	/* Since it seems like text-stroke property is non-standard. So, I found this article that explained how to use repeated text shadow, to get the same effect! https://dev.to/codingdudecom/everything-about-stroke-text-in-css-561i */
+	text-shadow: 0 1px #30481D, 1px 0 #30481D, 0 -1px #30481D, -1px 0 #30481D;
+	padding: 26px 26px 28px 21px;
+}
+
+h3 {
+	font-family: 'Lemon', cursive;
+	font-size: 40px;
+	color:#BFD5ED;
+	/* Since it seems like text-stroke property is non-standard. So, I found this article that explained how to use repeated text shadow, to get the same effect! https://dev.to/codingdudecom/everything-about-stroke-text-in-css-561i */
+	text-shadow: 0 1px #45586C, 1px 0 #45586C, 0 -1px #45586C, -1px 0 #45586C;
+	padding: 26px 26px 28px 21px;
+}
+
 body {
     background-image: url("../img/background.png");
 	background-repeat:repeat;
@@ -105,20 +123,19 @@ nav ul{
 }
 
 nav ul li {
+
+	
+}
+
+/* nav ul li:hover, .onpage {
+	
+	
+} */
+
+.button {
 	border: 1px #C62A70 solid;
 	box-shadow: 0 3px 6px #00000016;
 	border-radius: 19px;
-	display: flex;
-	justify-content: center;
-	
-}
-
-nav ul li:hover, .onpage {
-	background-color: #C62A70;
-	
-}
-
-.button {
 	width: 119px;
 	height: 64px;
 	display:flex;
@@ -131,6 +148,7 @@ nav ul li:hover, .onpage {
 
 .button:hover, .onpage1 {
 	color:white;
+	background-color: #C62A70;
 }
 
 
@@ -155,9 +173,47 @@ nav ul li:hover, .onpage {
 }
 
 .banner h1 {
-	padding-left: 40px; 
+	padding-left: 40px;
+	line-height: 94px;
 }
 
 .banner img {
 	height: 514px;
+	margin: 5px 0 10px 0;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+								Sections!
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+section {
+	background-color: white;
+	padding: 0 26px 26px;
+
+}
+
+section .sidebyside {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.sidebyside img {
+	width: 100%;
+}
+
+.sidebyside iframe {
+	width: 100%;
+	height:100%;
+}
+
+.left-side {
+	background-color: #C62A70;
+}
+
+.blacktext {
+	color: #000;
 }
