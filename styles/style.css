@@ -50,7 +50,6 @@ table {
 /* The background is a pattern. */
 
 html {
-	/* fonts */
 	font-family: 'Amaranth', sans-serif;
 	font-size: 20px;
 }
@@ -91,7 +90,7 @@ body {
 /* The entire website is wrapped in a narrow container. The mockup is 1920 and the container is 1080. 1080/1920=.5625=56.25% */
 
 .container {
-    width: 56.25%;
+    max-width: 1080px;
     margin: 0 auto;
     background-color: #C62A70;
 }
@@ -114,23 +113,24 @@ nav {
 	display:flex;
 	flex-direction: column;
 	justify-content: center;
-	flex-grow: 1;
+
+	/* flex-grow: 1; */
 }
 
 nav ul{
 	display: flex;
+	gap: 42px;
 	justify-content: space-evenly;
-}
-
-nav ul li {
-
+	padding-right:42px;
 	
 }
 
-/* nav ul li:hover, .onpage {
+nav li {
+	display: flex;
+	justify-content: space-around;
 	
 	
-} */
+}
 
 .button {
 	border: 1px #C62A70 solid;
@@ -143,7 +143,8 @@ nav ul li {
 	justify-content: center;
 	text-align: center;
 	text-decoration: none;
-	color:#C62A70
+	color:#C62A70;
+	
 }
 
 .button:hover, .onpage1 {
@@ -153,7 +154,7 @@ nav ul li {
 
 
 .logoimage {
-	width: 403px;
+	width: 100%;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -192,17 +193,19 @@ nav ul li {
 
 section {
 	background-color: white;
-	padding: 0 26px 26px;
+	/* padding: 0 26px 26px; */
 
 }
 
 section .sidebyside {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	/* background-color: green; */
 }
 
 .sidebyside img {
 	width: 100%;
+	align-self: stretch;
 }
 
 .sidebyside iframe {
@@ -212,8 +215,86 @@ section .sidebyside {
 
 .left-side {
 	background-color: #C62A70;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-right: -55px;
+	z-index: 1;
 }
 
-.blacktext {
-	color: #000;
+.right-side {
+	display:flex;
+	flex-direction: column;
+	/* justify-content: center; */
+}
+
+.right-side img{
+}
+
+.buttonblue {
+	background-color: #BFD5ED;
+	border: 1px #707070 solid;
+	box-shadow: 0 3px 6px #00000016;
+	border-radius: 19px;
+	width: 119px;
+	height: 64px;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	color:#000
+
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+								Footer
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+footer {
+	padding-top: 39px;
+	background-color: #fff;
+	display: flex;
+	justify-content: space-around;	
+
+}
+
+.footer-leftside, .footer-rightside {
+	background-color: #C62A70;
+	flex-grow: 1;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 253px;
+	color: white;
+	text-align: center;
+
+}
+
+.footer {
+	display: flex;
+	justify-content: center;
+}
+/* To style the right border on all but the last child:
+
+        :not(:last-child)
+
+        From: https://stackoverflow.com/questions/2573544/how-can-i-select-all-children-of-an-element-except-the-last-child */
+.footer li {
+	padding: 0 5px 0 5px;
+	
+}
+
+.footer li:not(:last-child) {
+	border-right: 2px #fff solid;
+}
+
+.footer li a{
+	text-decoration: none;
+	color: white;
 }
