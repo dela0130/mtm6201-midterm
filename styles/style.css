@@ -225,6 +225,7 @@ section .reverseorder {
 	justify-content: center;
 	align-items: center;
 	gap: 26px;
+	text-align: center;
 	
 }
 
@@ -319,8 +320,9 @@ footer {
 	body {
 		background-image: url("../img/background.png");
 		background-repeat:repeat;
-		background-position:left center;
-		background-size:1930px;
+		background-size:275px;
+		/* To match the background in the mockup at 1920px width, I'm shifting it slightly. */
+		background-position: -29%;
 	}
 /* The entire website is wrapped in a narrow container. The mockup is 1920 and the container is 1080. */
 
