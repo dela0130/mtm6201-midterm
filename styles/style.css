@@ -74,6 +74,8 @@ h1 {
 	font-size: 2rem;
 	font-family: 'Lemon', cursive;
 	color:#C62A70;
+	text-align: center;
+	padding: 3vw 1vw 3vw 1vw;
 	/* Since it seems like text-stroke property is non-standard. So, I found this article that explained how to use repeated text shadow, to get the same effect! https://dev.to/codingdudecom/everything-about-stroke-text-in-css-561i */
 	text-shadow: 0 1px #30481D, 1px 0 #30481D, 0 -1px #30481D, -1px 0 #30481D;
 }
@@ -81,7 +83,7 @@ h1 {
 h2 {
 	font-size: 1.8rem;
 	text-align: center;
-	padding: 26px 26px 28px 21px;
+	padding: 3vw 0px 3vw 0px;
 	font-family: 'Lemon', cursive;
 	color:#A3E66C;
 	/* Since it seems like text-stroke property is non-standard. So, I found this article that explained how to use repeated text shadow, to get the same effect! https://dev.to/codingdudecom/everything-about-stroke-text-in-css-561i */
@@ -307,6 +309,7 @@ footer {
 	h2 {
 		text-align: unset;
 		font-size: 60px;
+		padding: 26px 26px 28px 21px;
 	}
 
 	h3 {
