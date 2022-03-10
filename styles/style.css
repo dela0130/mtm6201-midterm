@@ -100,7 +100,7 @@ h3 {
 
 
 .container {
-    margin: 0 auto;
+	margin: 0 auto;
     background-color: #C62A70;
 }
 
@@ -271,7 +271,6 @@ footer {
 
 .footer-leftside, .footer-rightside {
 	background-color: #C62A70;
-	flex-grow: 1;
 	display:flex;
 	flex-direction: column;
 	justify-content: center;
@@ -283,20 +282,7 @@ footer {
 
 .footer {
 	display: flex;
-	justify-content: center;
-}
-/* To style the right border on all but the last child:
-
-        :not(:last-child)
-
-        From: https://stackoverflow.com/questions/2573544/how-can-i-select-all-children-of-an-element-except-the-last-child */
-.footer li {
-	padding: 0 50px 0 50px;
-	
-}
-
-.footer li:not(:last-child) {
-	border-right: 2px #fff solid;
+	justify-content: space-around;
 }
 
 .footer li a{
@@ -467,19 +453,12 @@ footer {
 
 	footer {
 		flex-direction: row;
-		justify-content: space-around;	
 
 	}
 
 	.footer-leftside, .footer-rightside {
-		background-color: #C62A70;
 		flex-grow: 1;
-		display:flex;
-		flex-direction: column;
-		justify-content: center;
 		height: 253px;
-		color: white;
-		text-align: center;
 
 	}
 
@@ -501,8 +480,4 @@ footer {
 		border-right: 2px #fff solid;
 	}
 
-	.footer li a{
-		text-decoration: none;
-		color: white;
-	}
 }
