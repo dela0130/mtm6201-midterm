@@ -58,9 +58,29 @@ table {
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+								Animations
+
+This is to rotate the image on the main page.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 								Defaults - Typography
 
-
+There are two fonts linked. I chose to set the font size to be larger than the standard for legibility.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 html {
@@ -76,7 +96,7 @@ h1 {
 	color:#C62A70;
 	text-align: center;
 	padding: 3vw 1vw 3vw 1vw;
-	/* Since it seems like text-stroke property is non-standard. So, I found this article that explained how to use repeated text shadow, to get the same effect! https://dev.to/codingdudecom/everything-about-stroke-text-in-css-561i */
+	/* It seems like text-stroke property is non-standard. So, I found this article that explained how to use repeated text shadow, to get the same effect! https://dev.to/codingdudecom/everything-about-stroke-text-in-css-561i */
 	text-shadow: 0 1px #30481D, 1px 0 #30481D, 0 -1px #30481D, -1px 0 #30481D;
 }
 
@@ -86,7 +106,7 @@ h2 {
 	padding: 3vw 0px 3vw 0px;
 	font-family: 'Lemon', cursive;
 	color:#A3E66C;
-	/* Since it seems like text-stroke property is non-standard. So, I found this article that explained how to use repeated text shadow, to get the same effect! https://dev.to/codingdudecom/everything-about-stroke-text-in-css-561i */
+	
 	text-shadow: 0 1px #30481D, 1px 0 #30481D, 0 -1px #30481D, -1px 0 #30481D;
 }
 
@@ -94,7 +114,7 @@ h3 {
 	font-size: 1.5rem;
 	font-family: 'Lemon', cursive;
 	color:#BFD5ED;
-	/* Since it seems like text-stroke property is non-standard. So, I found this article that explained how to use repeated text shadow, to get the same effect! https://dev.to/codingdudecom/everything-about-stroke-text-in-css-561i */
+
 	text-shadow: 0 1px #45586C, 1px 0 #45586C, 0 -1px #45586C, -1px 0 #45586C;
 	padding-top: 26px;
 }
@@ -117,7 +137,10 @@ h3 {
 
 header img {
 	width: 100%;
+	
 }
+
+/* This is to make sure that the logo doesn't leave space below it. The background colour was peaking through and causing a horizontal line. So I'm forcing it to the bottom.*/
 
 .logo a {
 	display:flex;
@@ -125,10 +148,13 @@ header img {
 	justify-content: flex-end;
 }
 
+/* This is to hide the checkbox */
 
 nav input {
 	display:none;
 }
+
+/* This is to make the label look like a selectable logo. I chose to make it look different than the other buttons because I didn't want to distract the user from the top of the page. I still feel like it's visible enough. */
 
 .mobilemenu {
 	cursor: pointer;
@@ -144,10 +170,13 @@ nav input {
 	
 }
 
+/*This makes sure the label transitions like the buttons do. */
+
 .mobilemenu:hover {
 	background-color: white;
 	color:#C62A70;
 	border: 1px #C62A70 solid;
+	transition: all 1s;
 }
 
 nav ul {
@@ -164,6 +193,7 @@ nav ul li {
 	padding: 10px;
 }
 
+/* I'm counting these transitions as animations for the purposes of this assignment. This button is using flex to keep everything centered.   */
 .button {
 	border: 1px #C62A70 solid;
 	box-shadow: 0 3px 6px #00000016;
@@ -175,12 +205,19 @@ nav ul li {
 	text-align: center;
 	text-decoration: none;
 	color:#C62A70;
-	
+	transition: all .3s;
 }
 
 .button:hover, .onpage1 {
 	color:white;
 	background-color: #C62A70;
+	
+}
+
+/* I removed this from the class above because I didn't like how when you switch to a page, the .onpage1 class would animate. */
+
+.button:hover {
+	transition: all .3s;
 }
 
 
@@ -204,7 +241,10 @@ nav ul li {
 .banner img {
 	width: 80%;
 	padding: 20px;
+	animation: rotate 80s linear infinite alternate;
 }
+
+/* I made small banners for the header boxes on each of the non-home pages. I felt like the original banner was too massive. */
 
 .smallbanner{
 	padding-top: 20px;
@@ -236,11 +276,14 @@ nav ul li {
 	margin:20px auto;
 }
 
+/* This is to make the phone number stand out. */
+
 .important{
 	font-size: 3rem;
 	padding: 10px;
 	color: #C62A70;
 }
+/* This is to separate the paragragh tag on the about page. */
 
 .bannermsg p {
 	margin: 5px;
@@ -262,6 +305,8 @@ section .sidebyside {
 	display: flex;
 	flex-direction: column;
 }
+
+/* I used column reverse in order to display the perturbed pops on top. */
 
 section .reverseorder {
 	flex-direction: column-reverse;
@@ -301,10 +346,12 @@ section .reverseorder {
 	text-decoration: none;
 	color:#000;
 	margin-bottom: 20px;
+	transition: all .3s;
 }
 
 .buttonblue:hover {
 	background-color: #A3E66C;
+	transition: all .3s;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -314,6 +361,8 @@ section .reverseorder {
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* The mockup seemed to have a massive footer. */
 
 footer {
 	padding-top: 39px;
@@ -369,6 +418,7 @@ footer {
 		font-size: 40px;
 	}
 
+	/* This was to create the background pattern in the mockup. In XD I used a huge image. I had to recreate it so it would load better. The file was massive. */
 	body {
 		background-image: url("../img/background.png");
 		background-repeat:repeat;
