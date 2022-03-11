@@ -119,23 +119,35 @@ header img {
 	width: 100%;
 }
 
+.logo a {
+	display:flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
 
 nav input {
 	display:none;
 }
 
-nav label {
+.mobilemenu {
 	cursor: pointer;
 	color:#fff;
-	border: 1px #C62A70 solid;
-	box-shadow: 0 3px 6px #00000016;
-	border-radius: 19px;
 	height: 64px;
 	display:flex;
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
 	text-decoration: none;
+	border: 1px #C62A70 solid;
+	
+	
+}
+
+.mobilemenu:hover {
+	background-color: white;
+	color:#C62A70;
+	border: 1px #C62A70 solid;
 }
 
 nav ul {
@@ -166,7 +178,7 @@ nav ul li {
 	
 }
 
-.button:hover, .onpage1  {
+.button:hover, .onpage1 {
 	color:white;
 	background-color: #C62A70;
 }
@@ -252,7 +264,10 @@ section .reverseorder {
 	text-decoration: none;
 	color:#000;
 	margin-bottom: 20px;
+}
 
+.buttonblue:hover {
+	background-color: #A3E66C;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -340,7 +355,7 @@ footer {
 
 
 	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-	nav label {
+	.mobilemenu {
 		display:none;
 	}
 
