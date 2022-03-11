@@ -206,8 +206,41 @@ nav ul li {
 	padding: 20px;
 }
 
+.smallbanner{
+	padding-top: 20px;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+} 
 
+.smallbanner img {
+	width: 50%;
+	padding: 20px;
+}
+.smallbanner .keepitsmall {
+	width: 20%;
+	padding: 20px;
+}
 
+.bannermsg {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-grow: 1;
+	padding: 10px;
+}
+
+.bannermsg a{
+	margin:20px auto;
+}
+
+.important{
+	font-size: 3rem;
+	padding: 10px;
+	color: #C62A70;
+}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -414,6 +447,16 @@ footer {
 		align-items: center;
 	}
 
+	.smallbanner {
+		background-color: #fff;
+		margin: 45px 0 0 0;
+		padding: 0 52px 0 52px;
+		display:flex;
+		flex-direction: row;
+		align-items: center;
+		
+	}
+
 	.banner h1 {
 		padding-left: 40px;
 		line-height: 94px;
@@ -423,7 +466,16 @@ footer {
 		height: 514px;
 		margin: 5px 0 10px 0;
 		width: unset;
+	}
 
+	.smallbanner img {
+		height: 275px;
+		margin: 5px 0 10px 0;
+		width: unset;
+	}
+
+	.smallbanner .keepitsmall {
+		width: unset;
 	}
 
 	/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
