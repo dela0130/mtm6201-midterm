@@ -23,24 +23,27 @@
 
 I'm using two different kinds of resolution switching.  I can serve higher resolution images for more pixel dense screens, since my site has a static width above 1080px. My site serves four smaller images below 1079px.
 
+Yet, I've realized that the validator doesn't like this. So I'm only displaying the lower different sizes, not a set of different resoltions. Would I need css to hide a second image set for higher resolutions?
+
 -->
 
             <img class="logoimage" 
             srcset="img/image1_logo-350.png 350w,
                     img/image1_logo-500.png 500w,
                     img/image1_logo-750.png 750w,
-                    img/image1_logo-1079.png 1079w,
-                    img/image1_logo1x.png 1x,
-                    img/image1_logo2x.png 2x,
-                    img/image1_logo3x.png 3x"
-                    
+                    img/image1_logo-1079.png 1079w"         
             sizes="(max-width: 350px) 350px,
                     (max-width: 500px) 500px,
                     (max-width: 750px) 750px,
                     (max-width: 1079px) 1079px"
+
             src="img/image1_logo.png" 
-            alt="Moody Pops Logo, in green and pink. All the pops have faces in them."          
-            >
+            alt="Moody Pops Logo, in green and pink. All the pops have faces in them."  
+            >          
+            <!-- srcset="img/image1_logo1x.png 1x,
+                    img/image1_logo2x.png 2x,
+                    img/image1_logo3x.png 3x" -->
+
         </a>
     </div>
 
@@ -75,10 +78,7 @@ I'm using two different kinds of resolution switching.  I can serve higher resol
         srcset="img/image2_banner-280.png 280w,
                 img/image2_banner-400.png 400w,    
                 img/image2_banner-600.png 600w,
-                img/image2_banner-863.png 863w,
-                img/image2_banner1x.png 1x,
-                img/image2_banner2x.png 2x,
-                img/image2_banner3x.png 3x"
+                img/image2_banner-863.png 863w"
 
         sizes="(max-width: 350px) 280px,
                 (max-width: 500px) 400px,
@@ -87,7 +87,9 @@ I'm using two different kinds of resolution switching.  I can serve higher resol
             
         src="img/image2_banner1x.png" 
         alt="Three dimensional images of eight cake pops in a circle. Each cake pop has a different face.">
-        
+        <!--    img/image2_banner1x.png 1x,
+                img/image2_banner2x.png 2x,
+                img/image2_banner3x.png 3x -->
 </div>
 <section>
     <h2>New location</h2>
@@ -100,10 +102,7 @@ welcome-we-are-open-inscription-4473398/-->
             srcset="img/image3_open-333.jpg 333w,
             img/image3_open-500.jpg 500w,
             img/image3_open-750.jpg 750w,
-            img/image3_open-1079.png 1079w,
-            img/image3_open1x.jpg 1x,
-            img/image3_open2x.jpg 2x,
-            img/image3_open3x.jpg 3x"
+            img/image3_open-1079.png 1079w"
             
             sizes="(max-width: 333px) 333px,
             (max-width: 500px) 500px,
@@ -112,6 +111,11 @@ welcome-we-are-open-inscription-4473398/-->
 
             src="img/image3_open.jpg" 
             alt="a woman entrepreneur holding a sign that says 'Welcome, we are open'.">
+
+                <!-- img/image3_open1x.jpg 1x,
+            img/image3_open2x.jpg 2x,
+            img/image3_open3x.jpg 3x -->
+
         </div>
         <div class="right-side">
 
@@ -134,10 +138,7 @@ welcome-we-are-open-inscription-4473398/-->
             srcset="img/image4_perturbed-333.jpg 333w,
                     img/image4_perturbed-500.jpg 500w,
                     img/image4_perturbed-750.jpg 750w,  
-                    img/image3_open-1079.png 1079w,
-                    img/image4_perturbed1x.png 1x,
-                    img/image4_perturbed2x.png 2x,
-                    img/image4_perturbed3x.png 3x
+                    img/image4_perturbed-1079.png 1079w
                     "
             sizes="(max-width: 333px) 333px,
                     (max-width:500px) 500px,
@@ -145,6 +146,10 @@ welcome-we-are-open-inscription-4473398/-->
                     (max-width:1079px) 1079px"
             src="img/image4_perturbed.png" 
             alt="Six cake pops, all with faces painted on them. Three in the background are out of focus.">
+
+            <!-- img/image4_perturbed1x.png 1x,
+            img/image4_perturbed2x.png 2x,
+            img/image4_perturbed3x.png 3x -->
         </div>
         
     </div>
